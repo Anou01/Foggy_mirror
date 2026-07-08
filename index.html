@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foggy Mirror</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="stage">
+  <video id="video" autoplay playsinline muted></video>
+  <canvas id="mirrorCanvas"></canvas>
+  <canvas id="fogCanvas"></canvas>
+  <canvas id="drawCanvas"></canvas>
+
+  <div id="uiLayer">
+    <div id="status">
+      <span id="mouthStatus">Mouth: gated</span>
+      <span id="pinchStatus">Pinch: gated</span>
+      <span id="stateStatus">STATE: WAITING_CALIBRATION</span>
+    </div>
+    <div id="calibrationPrompt">
+      <div class="promptTitle">Raise both hands in an L shape</div>
+      <div class="promptSub">Hold thumb and index finger open on both hands to unlock the mirror.</div>
+    </div>
+    <div id="countdown" aria-live="polite"></div>
+    <div id="bottomBar">
+      <div id="hint">After calibration: open mouth to fog the mirror, pinch thumb + index to wipe and write.</div>
+      <button id="resetBtn">Clear glass</button>
+    </div>
+  </div>
+
+  <div id="startOverlay">
+    <h1>Foggy Mirror</h1>
+    <p>Allow camera access. Calibrate with both hands in an L shape, then breathe fog and write by pinching.</p>
+    <button id="startBtn">Start camera</button>
+  </div>
+</div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
